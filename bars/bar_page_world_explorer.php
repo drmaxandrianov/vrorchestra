@@ -31,7 +31,7 @@
 	</p>
 </section>
 <section>
-	<h2>Robot submit.</h2>
+	<h2>Deploy new robot.</h2>
 	<p>
 		For walking inside the worlds as robot you must create it. Just
 		fill the linked form. You will not need nothing special as images

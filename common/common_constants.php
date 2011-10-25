@@ -17,6 +17,7 @@
 
 	$ROBOTS_TABLE_CREATE_CODE = "CREATE TABLE $ROBOTS_TABLE (" .
 		"Id bigint(20) NOT NULL AUTO_INCREMENT, " .
+		"Name text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL," .
 		"WorldId bigint(20) NOT NULL, " .
 		"PosX double NOT NULL, " .	
 		"PosY double NOT NULL, " .
