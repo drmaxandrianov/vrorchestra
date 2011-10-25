@@ -21,8 +21,7 @@ if (isset($_POST['DATABASE_SUBMIT'])) {
 	
 	// Create user for new database
 	if (!mysql_query("create user $DB_USER identified by '$DB_PASSWORD'", $dbc)) {
-		display_form("database created, but new user was not created, try again, plaese.");
-		exit;
+		// User already exist, continue
 	}
 
 	// Grant access for the new user
@@ -31,9 +30,23 @@ if (isset($_POST['DATABASE_SUBMIT'])) {
 		exit;
 	}
 
-	// Create table
-	
+	// Select database
+	if (!mysql_select_db($DB_NAME)) {
+		display_form("can not use just created database.");
+		exit;
+	}
 
+	// Create table 'worlds'
+	if (!mysql_query($WORLDS_TABLE_CREATE_CODE, $dbc)) {
+		display_form("can not create table 'worlds'.");
+		exit;
+	}
+
+	// Create table 'robots'
+	if (!mysql_query($ROBOTS_TABLE_CREATE_CODE, $dbc)) {
+		display_form("can not create table 'robots'.");
+		exit;
+	}
 
 	// Database and was successfully installed
 	display_success();
@@ -48,7 +61,7 @@ if (isset($_POST['DATABASE_SUBMIT'])) {
 function display_form($warning_message = "") {
 	?>
 	<section>
-		<h2>Configuration of VR Orchestra.</h2>
+		<h2>VR Orchestra database configurator.</h2>
 		<p>
 			This page is only for database installation purpouse.
 			Follow the instructions below.
@@ -58,7 +71,7 @@ function display_form($warning_message = "") {
 			<form method="POST" action="admin_create_database.php">
 				<legend>
 					All fields are required. Private data as administrator's login and password
-					will not be saved. It will be used only one time for data base
+					will not be saved. It will be used only one time for database
 					creation process. And one prerequirement: data base should be MySQL and
 					installation server should be local host.
 				</legend>
@@ -68,8 +81,8 @@ function display_form($warning_message = "") {
 							echo "<p><strong>Error: </strong>" . $warning_message . "</p>";
 					?>
 				<input type="hidden" name="DATABASE_SUBMIT">
-				<p><label>Data base administrator login: <input type="text" name="root_login" required></label></p>
-				<p><label>Data base administrator password: <input type="password" name="root_password" required></label></p>
+				<p><label>Database administrator login: <input type="text" name="root_login" required></label></p>
+				<p><label>Database administrator password: <input type="password" name="root_password" required></label></p>
 				<button type="submit">Create database</button>
 			</form>
 		</p>
@@ -80,7 +93,7 @@ function display_form($warning_message = "") {
 function display_success() {
 	?>
 	<section>
-		<h2>Configuration of VR Orchestra.</h2>
+		<h2>VR Orchestra database configurator.</h2>
 		<p>
 			This page is only for database installation purpouse.
 			Follow the instructions below.
@@ -88,6 +101,9 @@ function display_success() {
 		<p>
 			<h3>Database successfully created.</h3>
 			New data base was successfully created. Now you can use VR Orchestra.
+		</p>
+		<p>
+			<a href="admin_create_database.php">Go back</a>
 		</p>
 	</section>
 	<?php
