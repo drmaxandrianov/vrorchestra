@@ -31,14 +31,14 @@
 	</p>
 </section>
 <section>
-	<h2>Explore existing worlds.</h2>
+	<h2>Robot submit.</h2>
 	<p>
-		You can explore existing worlds. It is very easy and does not require any
-		programming knowledges. Go to the following page, select world you want to
-		explore and view the dynamic picture of all actions.
+		For walking inside the worlds as robot you must create it. Just
+		fill the linked form. You will not need nothing special as images
+		or code for now.
 	</p>
 	<p>
-		<a href="list_all_worlds.php">Explore existing worlds</a>
+		<a href="deploy_robot.php">Deploy robot</a>
 	</p>
 </section>
 <section>
@@ -49,5 +49,15 @@
 	</p>
 	<p>
 		<a href="list_all_worlds.php">Worlds manage area</a>
+	</p>
+</section>
+<section>
+	<h2>Manage robots.</h2>
+	<p>
+		You can manage all created robots. For this just go to the page with
+		list of all entites. There you can create, delete and edit all robots.
+	</p>
+	<p>
+		<a href="list_all_robots.php">Robots manage area</a>
 	</p>
 </section>
