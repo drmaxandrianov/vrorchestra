@@ -1,6 +1,9 @@
 <nav>
 	<ul>
 		<li>
+			<a href="index.php">Main page</a>
+		</li>
+		<li>
 			<a href="about.php">About the project</a>
 		</li>
 		<li>
