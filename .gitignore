@@ -1,0 +1,7 @@
+# Do not track following files
+
+# All images for pixels
+pixel_by_*.jpeg
+
+# All temporary files
+*~
