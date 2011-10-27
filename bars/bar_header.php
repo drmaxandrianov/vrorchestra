@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<title>VR Orchestra</title>
+		<link rel="stylesheet" href="common.css">
 		<!--[if lt IE 9]>
 			<script>
 				var e = ("article,aside,figcaption,figure,footer,header,hgroup,nav,section,time").split(',');

@@ -55,7 +55,7 @@ function display_form($warning_message = "") {
 				<input type="hidden" name="MAX_FILE_SIZE" value="1024000" />
 				<input type="hidden" name="WORLD_SUBMIT" />
 				<legend>
-					Notice, that it is better to upload BMP images for correct work.
+					Notice, that it is better to upload PNG images for correct work.
 					Also the maximum size of one image is limited to 1 Mb now.
 				</legend>
 					<?php

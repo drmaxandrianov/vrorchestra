@@ -1,7 +1,7 @@
 # Do not track following files
 
 # All images for worlds
-world_*.bmp
+world_*.*
 
 # All temporary files
 *~

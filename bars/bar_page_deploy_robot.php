@@ -9,9 +9,9 @@ $data = mysql_query($query);
 
 // Create list of all worlds for form
 $form_worlds_list = "";
-while($robot = mysql_fetch_array($data)) { 
-	$form_worlds_list .= "<option value='" . $robot['Id'] . "' " .
-		">" . $robot['Name'] . "</option>";
+while($world = mysql_fetch_array($data)) { 
+	$form_worlds_list .= "<option value='" . $world['Id'] . "' " .
+		">" . $world['Name'] . "</option>";
 }
 
 
