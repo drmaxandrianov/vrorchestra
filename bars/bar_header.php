@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>VR Orchestra</title>
-		<link rel="stylesheet" href="common.css">
+		<link rel="stylesheet" href="css/common.css">
 		<!--[if lt IE 9]>
 			<script>
 				var e = ("article,aside,figcaption,figure,footer,header,hgroup,nav,section,time").split(',');
@@ -13,9 +13,10 @@
 			</script>
 		<![endif]-->
 	</head>
-	<body>
-		<header>
-			<h1>
-				Welcome to VR Orchestra!
+	<body>		
+		<div id="content">
+		<header class="block_shadow block_corner_rounded block_background">
+			<h1 class="text_shadow_white text_header_color">
+				VR Orchestra
 			</h1>
 		</header>

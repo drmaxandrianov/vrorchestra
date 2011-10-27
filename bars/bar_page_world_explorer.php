@@ -1,9 +1,4 @@
 <section>
-	<p>
-		On this page you can uppload new world and manage existing.
-	</p>
-</section>
-<section>
 	<h2>Deploy new world.</h2>
 	<p>
 		Deploying of a new world is very easy. First of all create image of 3 colors in
