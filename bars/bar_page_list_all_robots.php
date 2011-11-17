@@ -16,7 +16,7 @@ if (mysql_num_rows($data) != 0) {
 	display_list_empty_content();
 }
 display_list_end();
-
+mysql_close($dbc);
 
 function display_robot($robot_id, $robot_name) {
 	?>
